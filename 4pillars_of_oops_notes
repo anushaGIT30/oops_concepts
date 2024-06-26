@@ -1,0 +1,150 @@
+the 4 pillars of oops are:
+1. ENCAPSULATION
+2. INHERITANCE
+3. ABSTRACTION 
+4. POLYMORPHISM 
+
+1. ENCAPSULATION:
+---> wrapping of data and information into single unit is called ENCAPSULATION.
+---> it can be also defined as binding code or functions  together in to a single unit.
+---> for example: capsule it is wrapped with different medicines.
+the 2 properties include:
+1.data protection: Encapsulation protects the internal state of an object by keeping its data members private. 
+Access to and modification of these data members is restricted to the class’s public methods, ensuring controlled
+ and secure data manipulation.
+2.information hiding: Encapsulation hides the internal implementation details of a class from external code. 
+Only the public interface of the class is accessible, providing abstraction and 
+simplifying the usage of the class while allowing the internal implementation
+ to be modified without impacting external code. 
+
+2. ABSTRACTION:
+---> hiding internal details and displaying only the essential information.
+--->Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation. 
+--->depends on the seperation of the interface and implementation details of the program.
+ex:
+1. Let's take a real life example of AC, which can be turned ON or OFF, change the temperature, change the mode, and other external components such as fan, swing. But, we don't know the internal details of the AC, i.e., how it works internally. Thus, we can say that AC seperates the implementation details from the external interface
+
+2. Consider a real-life example of a man driving a car. The man only knows that pressing the accelerator will increase the speed of the car or applying brakes will stop the car but he does not know how on pressing the accelerator the speed is actually increasing, he does not know about the inner mechanism of the car or the implementation of the accelerator, brakes, etc in the car. This is what abstraction is
+
+#include <iostream>  
+#include<math.h>  
+using namespace std;  
+int main()  
+{    
+ int n = 4;  
+   int power = 3;  
+   int result = pow(n,power);         // pow(n,power) is the  power function  
+   std::cout << "Cube of n is : " <<result<< std::endl;  
+   return 0;  
+} In the above example, pow() function is used to calculate 4 raised to the power 3.
+ The pow() function is present in the math.h header file in which all the implementation details of the pow() function is hidden.
+
+
+3. INHERITANCE:
+-->one object acquires all properties and behaviours from its parent object automatically.
+ADVANTAGE:
+1. code reuseability: you can reuse the members of your parent class. 
+So, there is no need to define the member again. So less code is required in the class.
+*****you can reuse, extend or modify the attributes and behaviors which are defined in other class.
+ ------>derived class: the class which inherits members of  another class is called derived class.
+ or   A Derived class is defined as the class derived from the base class.
+ ------> base class: the class whose members are inherited is called base class
+
+ generally inheritance is of 5 types:
+ 1. SINGLE INHERITANCE
+ 2. MULTIPLE INHERITANCE
+ 3. HIERARCHICHAL INHERITANCE
+ 4. MULTI LEVEL INHERITANCE
+ 5. HYBRID INHERITANCE
+
+ 1. SINGLE INHERITANCE: single inheritance is defined as the inheritance in which the derived class is inherited from 
+ only one base class. or When one class inherits another class, it is known as single level inheritance. 
+                        A 
+                        |
+                        |
+                        B   here A is the base class and B is the derived class
+
+2.  MULTI LEVEL INHERITANCE: deriving a class from another derived class
+--When one class inherits another class which is further inherited by another class, it is known as multi level inheritance in C++. 
+Inheritance is transitive so the last derived class acquires all the members of all its base classes.                     
+--For example, if we take Grandfather as a base class then Father is the derived class that has features of Grandfather and then Child is the also derived class that is derived from the sub-class Father 
+which inherits all the features of Father.
+                        a 
+                        |
+                        B
+                        |
+                        C
+Base class-> Wood, Intermediate class-> furniture, subclass-> table           
+
+3. MULTIPLE INHERITANCE: Multiple Inheritance is a feature of C++ where a class can inherit from more than one classes.  The constructors of inherited classes are called in the same order in which they are inherited. For example, in the following program, B’s constructor is called before A’s constructor.
+
+A class can be derived from more than one base class.
+
+Eg: 
+
+(i) A CHILD class is derived from FATHER and MOTHER class
+(ii) A PETROL class is derived from LIQUID and FUEL class.
+
+4. HYBRID INHERITANCE: Hybrid inheritance is a combination of more than one type of inheritance.
+
+5.  HIERARCHICAL INHERITANCE: 
+Hierarchical inheritance is defined as the process of deriving more than one class from a base class.
+
+
+
+4. POLYMORPHYSIM:
+“polymorphism” means having many forms. In simple words, we can define polymorphism as the ability of a message to be displayed in more than one form. 
+ex: A real-life example of polymorphism is a person who at the same time can have different characteristics. 
+A man at the same time is a father, a husband, and an employee. 
+So the same person exhibits different behavior in different situations. This is called polymorphism. 
+
+there are 2 types of polymorphysim:
+1. compile time polymorphysim
+   (1) function overloading
+   (2) operator overloading
+2. runtime polymorphysim
+   (1) virtual function
+   Compile time polymorphism                                      	Run time polymorphism
+-The function to be invoked is known at the compile time        -The function to be invoked is known at the run time
+
+-It is also known as overloading, early binding and             -It is also known as overriding, Dynamic binding and late binding.
+
+   static binding.
+
+-Overloading is a compile time polymorphism where more than one    -Overriding is a run time polymorphism where more than one method is having the same name, number of parameters and the type of the parameters.
+ method is having the same name but with the different number of 
+ parameters or the type of the parameters.
+
+- It is achieved by function overloading and                       -It is achieved by virtual functions and pointers.
+ operator overloading.      
+
+-It provides fast execution as it is known at the compile time       - it provides slow execution
+
+-It is less flexible as mainly all the things execute               -It is more flexible as all the things execute at the run time.
+ at the compile time.
+
+
+ OVERLOADING: 
+ * If we create two or more members having the same name but different in number or type of parameter,
+  it is known as overloading. 
+
+  * we can overload methods,constructors, and indexed properties.
+  Function Overloading
+1. Function Overloading: it  is defined as the process of having two or more function with the same name, 
+but different in parameters is known as function overloading in C++. 
+In function overloading, the function is redefined by using either different types of arguments or a different number of arguments. It is only through these differences compiler can differentiate between the functions.
+
+-The advantage of Function overloading is that it increases the readability of 
+the program because you don't need to use different names for the same action.
+
+2. Operator overloading: it  is a compile-time polymorphism. 
+  It is an idea of giving special meaning to an existing operator
+  Operator overloading is a compile-time polymorphism in which the operator is
+   overloaded to provide the special meaning to the user-defined data type. Operator overloading is used to overload or redefines most of the operators available in C++.
+   It is used to perform the operation on the user-defined data type.
+   (1) virtual function: A virtual function (also known as virtual methods) is a member function that is declared within a 
+   base class and is re-defined (overridden) by a derived class.
+   It is declared using the virtual keyword.
+---> It is used to tell the compiler to perform dynamic linkage or late binding on the function.
+                                                                    
+                         

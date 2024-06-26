@@ -1,0 +1,55 @@
+class: a class is a user defined datatype which has its own data members and member functions . a class is like a blueprint 
+of an object.
+ex: if we take a class of cars the there may be different cars with different names but all of them share common properties
+like 4 wheels,speed limit,mileage range etc.
+here speed limit,mileage range are the data members
+and apply breaks,increase speed etc are the data functions.
+
+
+here the blueprint is called because group of objects share common properties and behaviours.
+
+object: an object is an instance of a class
+when we create a class no memory is allocated but if we create an object memory is allocated
+
+
+Access specifiers:
+1.public: the data members and member functions declared in the public can be accessed by every one
+2.private:  The class members declared as private can be accessed only by the member functions inside the class. 
+They are not allowed to be accessed directly by any object or function outside the class. 
+Only the member functions or the friend functions are allowed to access the private data members of the class. 
+3.protected: it is same as private access modifier in the sense that it can’t be accessed outside of its class unless with the help of a friend class. The difference is that the class members declared as Protected can be accessed by any subclass (derived class) of that class as well. 
+
+FRIEND FUNCTION: 
+--> it is used to access the both private and protected members
+For example, a LinkedList class may be allowed to access private members of Node.
+---- it is declared by using friend keyword
+
+
+CONSTRUCTOR: is a special method which is invoked automatically when the time of object creation
+-----it has same name as a class name
+1.DEFAULT CONSTRUCTOR : doesnot contains any arguments
+2.PARAMETERIZED CONSTRUCTOR : takes parameters
+3.COPY CONSTRUCTOR: A copy constructor is a member function that initializes an object using another object of the same class. In simple terms, a constructor which creates an object by initializing it with an object of the same class, which has been created previously is known as a copy constructor. 
+
+DIFFERENCE BETWEEN CONSTRUCTOR AND A DESTRUCTOR:
+--constructor:                                          --destructor
+1. used to create an object                            1.used to destroy the object
+2. it  either accepts the argument                     2. it does not have any arguments
+    or not.
+3. It is declared as className                         3.Whereas it is declared as ~ className( no arguments ){ }.
+   ( arguments if any ){Constructor’s Body }    
+4. it is used to allocate the  memory                  4. used to deallocate the memory
+5. it can be  overloaded                               5. it can't be overloaded
+6. the constructor name is same as the class           6. the destructor name is same as as the class name but it 
+   name.                                                   has ~tilted.
+7.  in class there may be multiple constructors         7. there may be only one destructor
+
+
+
+THIS POINTER:
+---> this is a keyword refers to the current instace  of a class
+---> It can be used to pass current object as a parameter to another method.
+It can be used to refer current class instance variable.
+It can be used to declare indexers.
+ USAGE:
+ ->When local variable’s name is same as member’s name
